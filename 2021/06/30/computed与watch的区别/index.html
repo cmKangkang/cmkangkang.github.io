@@ -15,7 +15,7 @@
     
   
   <!-- title -->
-  <title>Blog blog 001 </title>
+  <title>Blog computed 与 watch 的区别 </title>
   <!-- styles -->
   <!-- styles -->
 
@@ -40,16 +40,16 @@
     <main>
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__header">
-  <h1 class="post__title">blog 001</h1>
+  <h1 class="post__title">computed 与 watch 的区别</h1>
   
   
   <div class="post__meta">
     
-<time class="post__date" datetime="2021-06-29T05:13:09.000Z" itemprop="datePublished">
+<time class="post__date" datetime="2021-06-29T16:00:00.000Z" itemprop="datePublished">
   
   <i class="blogfont">&#xedff;</i>
   
-  2021-06-29 13:13:09
+  2021-06-30 00:00:00
 </time>
 
     
@@ -57,11 +57,11 @@
     
 <div class="post__tag">
   <i class="blogfont">&#xe7ec;</i>
-  <a class="tag-link-link" href="/tags/test/" rel="tag">test</a>
+  <a class="tag-link-link" href="/tags/vue/" rel="tag">vue</a>
 </div>
 
 
-    <div id="/2021/06/29/blog-001/" class="leancloud_visitors post__stat" data-flag-title="blog 001">
+    <div id="/2021/06/30/computed%E4%B8%8Ewatch%E7%9A%84%E5%8C%BA%E5%88%AB/" class="leancloud_visitors post__stat" data-flag-title="computed 与 watch 的区别">
   <i class="blogfont">&#xe672;</i>
   <span class="leancloud-visitors-count">loading...</span>
 </div>
@@ -76,12 +76,23 @@
       <i class="blogfont">&#xe6c1;</i>
     </a>
   </div>
-  <ol class="post__toc"><li class="post__toc-item post__toc-level-1"><a class="post__toc-link" href="#blog-001"><span class="post__toc-text">blog 001</span></a></li></ol>
+  <ol class="post__toc"><li class="post__toc-item post__toc-level-1"><a class="post__toc-link" href="#computed%E4%B8%8Ewatch%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="post__toc-text">computed与watch的区别</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#computed"><span class="post__toc-text">computed</span></a></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#watch"><span class="post__toc-text">watch</span></a></li></ol></li></ol>
 </aside>
   <div class="post__content" itemprop="articleBody">
-    <h1 id="blog-001"><a href="#blog-001" class="headerlink" title="blog 001"></a>blog 001</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Hello World!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>纪念我的第一个hexo博客。</p>
+    <h1 id="computed与watch的区别"><a href="#computed与watch的区别" class="headerlink" title="computed与watch的区别"></a>computed与watch的区别</h1><h2 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h2><ol>
+<li>支持缓存，默认走缓存。计算属性是基于它们的响应式依赖进行缓存的，也就是基于data中声明过或者父组件传递的props中的数据通过计算得到的值。</li>
+<li>依赖其他属性，只有当依赖的数据发生改变，才会进行重新计算。</li>
+<li>不支持异步，当computed内有异步操作时无效，无法监听数据的变化。</li>
+<li>如果computed属性值是函数，那么默认会走get方法；函数的返回值就是属性的属性值；在computed中的，属性都有一个get和一个set方法，当数据变化时，调用set方法。</li>
+</ol>
+<h2 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h2><ol>
+<li><p>不支持缓存，一旦数据变化，会直接触发相应的操作。</p>
+</li>
+<li><p>支持异步。</p>
+</li>
+<li><p>接收两个参数，第一个是新值，第二个是旧值。</p>
+</li>
+</ol>
 
   </div>
   
