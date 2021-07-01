@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html  lang=zh-CN>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.svg ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>Blog git基础 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <!-- <a class="menu__item" href="/">作品</a> -->
+    <!-- <a class="menu__item" href="/about/">关于</a> -->
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">git基础</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2021-07-01T07:37:00.000Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2021-07-01 15:37:00
+</time>
+
+    
+
+    
+<div class="post__tag">
+  <i class="blogfont">&#xe7ec;</i>
+  <a class="tag-link-link" href="/tags/git/" rel="tag">git</a>
+</div>
+
+
+    <div id="/2021/07/01/2021-07-01-git%E5%9F%BA%E7%A1%80/" class="leancloud_visitors post__stat" data-flag-title="git基础">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- 回到顶部 -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  <ol class="post__toc"><li class="post__toc-item post__toc-level-1"><a class="post__toc-link" href="#git-%E5%9F%BA%E7%A1%80"><span class="post__toc-text">git 基础</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="post__toc-text">常用命令</span></a></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#http-s-%E4%B8%8Essh"><span class="post__toc-text">http(s)与ssh</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#%E6%B7%BB%E5%8A%A0ssh"><span class="post__toc-text">添加ssh</span></a></li></ol></li></ol></li></ol>
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <h1 id="git-基础"><a href="#git-基础" class="headerlink" title="git 基础"></a>git 基础</h1><p>下面几个概念，简单带过</p>
+<p>工作区：存放代码文件的位置。</p>
+<p>暂存区：暂存文件的位置，通过<code>git add</code>命令将工作区的文件添加到暂存区。</p>
+<p>本地仓库：<code>git commit</code>命令可将暂存区的代码提交至本地仓库。</p>
+<p>远程仓库：托管在代码服务器上的仓库，通过<code>git push</code>命令可将本地代码提交至远程仓库。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><p><code>git init</code>：初始化仓库。</p>
+</li>
+<li><p><code>git remote</code> : 常用与远程仓库有关的操作。</p>
+<ul>
+<li><p>为本地仓库添加远程仓库：</p>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm">git remote <span class="hljs-keyword">add </span><span class="hljs-keyword">origin </span>&lt;your-repos-<span class="hljs-keyword">addr&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p>查看远程仓库信息</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git remote -v</span><br></code></pre></td></tr></table></figure></li>
+<li><p>显示某个远程仓库信息</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><code class="hljs xml">git remote show <span class="hljs-tag">&lt;<span class="hljs-name">your-repos-addr</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p>删除远程仓库</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript">git remote rm &lt;your-repos-<span class="hljs-built_in">name</span>&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p>修改远程仓库</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git remote <span class="hljs-keyword">rename</span> &lt;<span class="hljs-built_in">old</span>-<span class="hljs-type">name</span>&gt; &lt;<span class="hljs-built_in">new</span>-<span class="hljs-type">name</span>&gt;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git config</code>：获取并设置存储库或全局选项。</p>
+<p>当安装Git后（或与第一次与远程仓库建立连接前）首先要做的事情是设置用户名称和e-mail地址，这些信息永远的嵌入到每一次提交中，所以十分重要。</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><code class="hljs lua">git <span class="hljs-built_in">config</span> <span class="hljs-comment">--global user.name &lt;your-name&gt;			配置用户名</span><br>git <span class="hljs-built_in">config</span> <span class="hljs-comment">--global user.email &lt;your-email-addr&gt;	配置邮箱</span><br></code></pre></td></tr></table></figure></li>
+<li><p><code>git clone</code>：从远程仓库克隆到当前目录</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&lt;your-repos-addr</span>&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p><code>git fetch</code>：将远程仓库的最新内容拉到本地，由用户检查并决定是否合并到工作分支。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><code class="hljs xml">git fetch <span class="hljs-tag">&lt;<span class="hljs-name">your-repos-addr</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p><code>git pull</code>：从远程主机的最新内容拉到本地，直接强制合并。<code>git pull</code> = <code>git fetch</code> + <code>git merge</code></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><code class="hljs xml">git pull <span class="hljs-tag">&lt;<span class="hljs-name">your-repos-addr</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li><p><code>git add</code>：添加工作区代码进入暂存区。</p>
+<ul>
+<li><p>添加暂存区所有文件</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">git <span class="hljs-builtin-name">add</span> .<br></code></pre></td></tr></table></figure></li>
+<li><p>添加指令文件</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><code class="hljs livecodeserver">git <span class="hljs-built_in">add</span> &lt;<span class="hljs-built_in">file</span>-path&gt;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git status</code>：查看当前仓库的状态，显示有变更的文件。</p>
+</li>
+<li><p><code>git rm</code>：删除文件。</p>
+<ul>
+<li><p>删除工作区文件</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><code class="hljs stata">git <span class="hljs-keyword">rm</span> &lt;<span class="hljs-keyword">file</span>-path&gt;		删除文件<br><span class="hljs-keyword">fit</span> <span class="hljs-keyword">rm</span> -r &lt;folder-path&gt;	删除文件夹<br></code></pre></td></tr></table></figure></li>
+<li><p>删除暂存区文件 </p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><code class="hljs stata">git <span class="hljs-keyword">rm</span> -r --cached * 		删除暂存区所有文件<br>git <span class="hljs-keyword">rm</span> --cached &lt;<span class="hljs-keyword">file</span>-path&gt;	删除暂存区指定文件<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git commit</code>：添加暂存区代码进入本地仓库。</p>
+</li>
+</ol>
+   <figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">&quot;&lt;commit-infos&gt;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="11">
+<li><p><code>git push</code>：推送本地仓库代码到远程仓库。</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima">git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> &lt;branch-name&gt;<br>或<br>git <span class="hljs-built_in">push</span> <span class="hljs-built_in">origin</span> &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>本地版本与远程版本有差异，但又要 强制推送</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><code class="hljs maxima">git <span class="hljs-built_in">push</span> --force <span class="hljs-built_in">origin</span> &lt;branch-name&gt;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git log</code>：查看历史提交记录。</p>
+</li>
+<li><p><code>git branch</code>：从当前分支新建分支，分支内容为当前分支的内容。</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><code class="hljs haxe">git branch &lt;<span class="hljs-keyword">new</span><span class="hljs-type"></span>-branch-name&gt;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>删除分支</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript">git branch -d &lt;branch-<span class="hljs-built_in">name</span>&gt;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git checkout</code>：从当前切换到指定分支。</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript">git checkout &lt;branch-<span class="hljs-built_in">name</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>创建新分支并切换到该分支</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><code class="hljs haxe">git checkout -b &lt;<span class="hljs-keyword">new</span><span class="hljs-type"></span>-branch-name&gt;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>git merge</code>：合并指定分支到当前分支。</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><code class="hljs fortran">git <span class="hljs-built_in">merge</span> &lt;other-branch-<span class="hljs-keyword">name</span>&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p><code>git rebase</code>：在另一个分支基础之上重新应用，把一个分支的修改合并到当前分支。详情见<a target="_blank" rel="noopener" href="https://www.yiibai.com/git/git_rebase.html">git rebase命令 - Git教程™ (yiibai.com)</a>。</p>
+<p>多看，不然会忘^-^</p>
+</li>
+</ol>
+<h2 id="http-s-与ssh"><a href="#http-s-与ssh" class="headerlink" title="http(s)与ssh"></a>http(s)与ssh</h2><p>在浏览github遇到比较感兴趣的项目（或自己的项目）时，我通常会把工程拉到本地，方便阅读源码。每次拉代码的时候都会注意到github提供的两种拉取方式：http(s)与ssh。</p>
+<p>这两者的区别在于：</p>
+<ul>
+<li><p>使用https url克隆对初学者来说会比较方便，复制https url然后到git Bash里面直接用clone命令克隆到本地就好了，但是每次fetch和push代码都需要输入账号和密码，这也是https方式的麻烦之处。</p>
+</li>
+<li><p>而使用SSH url克隆却需要在克隆之前先配置和添加好SSH key，因此，如果你想要使用SSH url克隆的话，你必须是这个项目的拥有者。否则你是无法添加SSH key的，另外ssh默认是每次fetch和push代码都不需要输入账号和密码，如果你想要每次都输入账号密码才能进行fetch和push也可以另外进行设置。</p>
+</li>
+</ul>
+<h3 id="添加ssh"><a href="#添加ssh" class="headerlink" title="添加ssh"></a>添加ssh</h3><ol>
+<li><p>检查电脑本地是否已经生成ssh key</p>
+<p>在git bash或终端执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">cd ~/.ssh<br>ls<br></code></pre></td></tr></table></figure>
+
+<p>若已经存在<code>id_ras.pub</code>或<code>id_dsa.pub</code>文件，则说明本地存在ssh key。</p>
+<p>若不存在，那么需要先创建一个ssh key.</p>
+</li>
+<li><p>创建ssh key</p>
+<p>执行命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">ssh-keygen -t rsa -C &lt;your-email-addr&gt;<br></code></pre></td></tr></table></figure>
+
+<p>-t指定密钥类型，默认是rsa，可以省略。<br>-C设置注释文字，比如邮箱。<br>-f指定密钥文件存储文件名。（命令省略了-f参数，因此，运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的SSH key代码。）若使用默认文件名，会生成<code>id_rsa</code>和<code>id_rsa.pub</code>两个密钥文件。</p>
+<p>创建成功后，去<code>1</code>中的<code>.ssh</code>文件夹可找到生成的密钥。</p>
+</li>
+<li><p>添加ssh key到git服务器</p>
+<p>将<code>id_rsa.pub</code>文件中的内容拷贝，粘贴到github或其他代码管理平台的ssh key 设置。</p>
+</li>
+<li><p>测试ssh key</p>
+<p>执行命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">ssh -T &lt;代码管理平台地址&gt;<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="bash"> 如：</span><br>ssh -T git@github.com<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>综上，可以看出添加ssh key还是比较麻烦的，所以很多时候我都直接使用https url克隆到本地，这更加方便；但是在修改自己的项目的时候，还是会用到ssh url克隆。</p>
+
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2021
+  cmKangkang
+  
+  
+    <a class="social-links" target="_blank" rel="noopener" href="https://github.com/cmkangkang"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:cmkangkang@foxmail.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
