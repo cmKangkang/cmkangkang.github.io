@@ -1,5 +1,6 @@
 #footer {
-  position: relative;
+  position: sticky;
+  top: 93%;
   width: 100%;
   font: font-smaller/1 footer-font;
   padding: space-normal;

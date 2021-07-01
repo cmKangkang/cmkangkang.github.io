@@ -184,7 +184,8 @@ main {
   }
 }
 #footer {
-  position: relative;
+  position: sticky;
+  top: 93%;
   width: 100%;
   font: 1.3rem/1 'Microsoft JhengHei UI Light';
   padding: 1.5rem;
