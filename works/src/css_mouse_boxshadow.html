@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 鼠标跟踪</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eed9eba9;
+        }
+        .shell{
+            display: grid;
+            grid-template-columns: repeat(7,40px);
+            grid-template-rows: repeat(7,40px);
+            grid-gap: 2rem;
+        }
+        .item{
+            background-color: rgb(17, 17, 17);
+            border-radius: 5px;
+            border-left: solid 10px rgb(255, 255, 255);
+        }
+        .item::after,.item::before{
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            border-radius: 3px;
+            left: 20px;
+            background-color: #fff;
+        } 
+        .item::after{
+            top: 25px;
+        }
+        .item::before{
+            bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script>
+
+        const mouseHeight = 400;
+
+        const sqrHeight = 8;
+
+        document.addEventListener('mousemove',e => {
+            const item = document.querySelectorAll(".item")
+
+            const mouseX = e.clientX
+            const mouseY = e.clientY
+            
+            item.forEach(sqr => {
+                const sqrX = sqr.offsetLeft
+                const sqrY = sqr.offsetTop
+
+                const diffX = mouseX -sqrX
+                const diffY = mouseY -sqrY
+
+                const radians = Math.atan2(diffY,diffX)
+
+                const angle = radians * 180 / Math.PI
+
+                const shadowX = -sqrHeight / (mouseHeight / diffX);
+                const shadowY = -sqrHeight / (mouseHeight / diffY);
+                sqr.style.boxShadow = shadowX + "px " + shadowY + "px 10px rgba(0, 0, 0, 0.8)"
+            })
+        })
+    </script>
+</body>
+
+</html>
