@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html  lang=zh-CN>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.svg ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>cmkk的博客小站 hexo博客内嵌HTML页面 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <a class="menu__item" href="/works/">作品</a>
+    <a class="menu__item" href="/about/">关于</a>
+    <a class="menu__item" href="/resume/">简历</a>
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">hexo博客内嵌HTML页面</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2021-07-04T09:36:22.000Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2021-07-04 17:36:22
+</time>
+
+    
+
+    
+<div class="post__tag">
+  <i class="blogfont">&#xe7ec;</i>
+  <a class="tag-link-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+</div>
+
+
+    <div id="/2021/07/04/hexo%E5%8D%9A%E5%AE%A2%E5%86%85%E5%B5%8CHTML%E9%A1%B5%E9%9D%A2/" class="leancloud_visitors post__stat" data-flag-title="hexo博客内嵌HTML页面">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- 回到顶部 -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  <ol class="post__toc"><li class="post__toc-item post__toc-level-1"><a class="post__toc-link" href="#hexo%E5%8D%9A%E5%AE%A2%E5%86%85%E5%B5%8Chtml%E9%A1%B5%E9%9D%A2"><span class="post__toc-text">hexo博客内嵌html页面</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#1-%E5%88%A9%E7%94%A8-lt-iframe-gt"><span class="post__toc-text">1. 利用&lt;iframe&gt;</span></a></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#2-%E7%9B%B4%E6%8E%A5%E5%B5%8C%E5%85%A5HTML%E4%BB%A3%E7%A0%81%E6%AE%B5%E3%80%82"><span class="post__toc-text">2. 直接嵌入HTML代码段。</span></a></li></ol></li></ol>
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <h1 id="hexo博客内嵌html页面"><a href="#hexo博客内嵌html页面" class="headerlink" title="hexo博客内嵌html页面"></a>hexo博客内嵌html页面</h1><p>我是一个前端菜鸟，最近开始尝试用hexo写博客。平时自己会写一些小demo，每次想温习一下都只能在本地打开，找文件的过程又复杂至极。我是一个懒人，就想着能不能把HTML嵌入到自己的博文中，既可以记录用到的技巧，也可以看见最终效果，还省去了找源文件的琐碎，一举三得。</p>
+<p>那么如何实现呢？我们可以利用markdown支持html标签的特性，来嵌入html代码。</p>
+<h2 id="1-利用-lt-iframe-gt"><a href="#1-利用-lt-iframe-gt" class="headerlink" title="1. 利用&lt;iframe&gt;"></a>1. 利用<code>&lt;iframe&gt;</code></h2><p>利用<code>&lt;iframe&gt;</code>标签，直接在文中嵌入完整的html页面。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:100%; height:800px;border:none;text-align:center&quot;</span>&gt;</span> <br>	<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">allowtransparency</span>=<span class="hljs-string">&quot;yes&quot;</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100%&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;88&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./src/index.html&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>iframe创造了一个隔离环境，可以避免嵌入页面的样式被博客页面的样式污染（也可避免博客站样式被嵌入页面污染）。</p>
+<p>下面是一个利用<code>&lt;iframe&gt;</code>嵌入的demo。</p>
+<div style="width:100%; height:600px;border:none;text-align:center"> 
+    <iframe allowtransparency="yes" frameborder="0" width="100%" height="100%" src="/assets/css_mouse_boxshadow.html">
+    </iframe>
+</div>
+
+
+<h2 id="2-直接嵌入HTML代码段。"><a href="#2-直接嵌入HTML代码段。" class="headerlink" title="2. 直接嵌入HTML代码段。"></a>2. 直接嵌入HTML代码段。</h2><p>纯粹的 <code>HTML</code> 代码，加上 <code>style</code> 和 <code>script</code> 标签，直接写在 <code>.md</code> 里面。</p>
+<p>但当一篇博客有多个demo，每个demo之间很有可能会产生样式冲突，且也有可能导致嵌入页面与博客原本页面之间的样式冲突。</p>
+<p>下面是直接嵌入html代码的例子:</p>
+<div class="container">
+        <style>
+        * {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d3dafa;
+        }
+        .shell{
+            position: relative;
+            width: 380px;
+            height: 650px;
+            background-color: #8a98c9;
+        }
+        .buttons{
+            margin: 60px 0;
+            color: #fff;
+                        height: 650px;
+        }
+        .li{
+            letter-spacing: 2px;
+            font: 600 17px '';
+            padding: 16px 52px;
+            transition: .3s;
+        }
+        .li::after{
+            content: '';
+            position: absolute;
+            left: 20px;
+            margin-top: -22px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .buttons>li:hover{
+            background-color: #D3DAFA;
+        }
+        .li ul{
+            width: 0;
+            height: 650px;
+            padding: 60px 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background-color: #59699b;
+            transition: .3s;
+        }
+        .li ul li{
+            padding: 16px 24px;
+            transition: .3s;
+        }
+        .li:hover ul{
+            width: 328px;
+        }
+        .li ul li:hover{
+            padding-left: 4em;
+            transform: scale(1.2);
+            background-color: #8A98C9;
+        }
+    </style>
+    <nav class="shell">
+        <ul class="buttons">
+            <li class="li">
+                management
+                <ul>
+                    <li>Sold  baby</li>
+                    <li>Evaluation</li>
+                    <li>Shopkeeper</li>
+                    <li>Management</li>
+                </ul>
+            </li>
+            <li class="li">
+                logisitcs
+                <ul>
+                    <li>Warehouse    </li>
+                    <li>deliver goods</li>
+                    <li>stock        </li>
+                    <li>mail         </li>
+                    <li>return goods </li>
+                </ul>
+            </li>
+            <li class="li">
+                treasure
+                <ul>
+                    <li>Release baby   </li>
+                    <li>Posting Details</li>
+                    <li>Shop decoration</li>
+                </ul>
+            </li>
+            <li class="li">
+                financial service
+                <ul>
+                    <li>payment              </li>
+                    <li>Loan goods           </li>
+                    <li>Collection in advance</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<p>值得注意的是，直接嵌入html代码时，代码之间不能有空行，否则无法正确地渲染。<br>若将container改为body，整个页面的背景色将会被改变。<br>下面是被直接嵌入的代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">        * &#123;</span><br><span class="css">            <span class="hljs-attribute">list-style-type</span>: none;</span><br><span class="css">            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.container</span> &#123;</span><br><span class="css">            <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;</span><br><span class="css">            <span class="hljs-attribute">display</span>: flex;</span><br><span class="css">            <span class="hljs-attribute">align-items</span>: center;</span><br><span class="css">            <span class="hljs-attribute">justify-content</span>: center;</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#d3dafa</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.shell</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">position</span>: relative;</span><br><span class="css">            <span class="hljs-attribute">width</span>: <span class="hljs-number">380px</span>;</span><br><span class="css">            <span class="hljs-attribute">height</span>: <span class="hljs-number">650px</span>;</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#8a98c9</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.buttons</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">margin</span>: <span class="hljs-number">60px</span> <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;</span><br><span class="css">						<span class="hljs-attribute">height</span>: <span class="hljs-number">650px</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">2px</span>;</span><br><span class="css">            <span class="hljs-attribute">font</span>: <span class="hljs-number">600</span> <span class="hljs-number">17px</span> <span class="hljs-string">&#x27;&#x27;</span>;</span><br><span class="css">            <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span> <span class="hljs-number">52px</span>;</span><br><span class="css">            <span class="hljs-attribute">transition</span>: .<span class="hljs-number">3s</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span><span class="hljs-selector-pseudo">::after</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;</span><br><span class="css">            <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">            <span class="hljs-attribute">left</span>: <span class="hljs-number">20px</span>;</span><br><span class="css">            <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">22px</span>;</span><br><span class="css">            <span class="hljs-attribute">display</span>: block;</span><br><span class="css">            <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;</span><br><span class="css">            <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;</span><br><span class="css">            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.buttons</span>&gt;<span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:hover</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#D3DAFA</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span> <span class="hljs-selector-tag">ul</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">height</span>: <span class="hljs-number">650px</span>;</span><br><span class="css">            <span class="hljs-attribute">padding</span>: <span class="hljs-number">60px</span> <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">            <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;</span><br><span class="css">            <span class="hljs-attribute">overflow</span>: hidden;</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#59699b</span>;</span><br><span class="css">            <span class="hljs-attribute">transition</span>: .<span class="hljs-number">3s</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span> <span class="hljs-number">24px</span>;</span><br><span class="css">            <span class="hljs-attribute">transition</span>: .<span class="hljs-number">3s</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-tag">ul</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">width</span>: <span class="hljs-number">328px</span>;</span><br><span class="css">        &#125;</span><br><span class="css">        <span class="hljs-selector-class">.li</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:hover</span>&#123;</span><br><span class="css">            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">4em</span>;</span><br><span class="css">            <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1.2</span>);</span><br><span class="css">            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#8A98C9</span>;</span><br><span class="css">        &#125;</span><br><span class="css">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shell&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;buttons&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;li&quot;</span>&gt;</span><br>                management<br>                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Sold  baby<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Evaluation<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Shopkeeper<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Management<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;li&quot;</span>&gt;</span><br>                logisitcs<br>                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Warehouse    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>deliver goods<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>stock        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>mail         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>return goods <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;li&quot;</span>&gt;</span><br>                treasure<br>                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Release baby   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Posting Details<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Shop decoration<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;li&quot;</span>&gt;</span><br>                financial service<br>                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>payment              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Loan goods           <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Collection in advance<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2021
+  cmKangkang
+  
+  
+    <a class="social-links" target="_blank" rel="noopener" href="https://github.com/cmkangkang"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:cmkangkang@foxmail.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
