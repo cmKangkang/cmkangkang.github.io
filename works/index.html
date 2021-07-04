@@ -15,7 +15,7 @@
     
   
   <!-- title -->
-  <title>cmkk的博客小站 小作品 </title>
+  <title>cmkk的博客小站 small tricks </title>
   <!-- styles -->
   <!-- styles -->
 
@@ -41,15 +41,34 @@
     <main>
       <article id="works" class="works">
   <!-- <iframe src="./index.html" frameborder="0"></iframe> -->
-  <h1 class="post__title">小作品</h1>
+  <h1 class="post__title">small tricks</h1>
   <div class="post__content" itemprop="articleBody">
-    <h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><ul>
-<li><p><a href="./src/css_mouse_tracing.html"><u>css 实现鼠标跟踪</u></a></p>
+    <div class="works-list">
+      <h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><ul>
+<li><p><a href="./src/css_mouse_tracing.html">css 实现鼠标跟踪</a></p>
 </li>
-<li><p><a href="./src/css_mouse_boxshadow.html"><u>css 鼠标改变box-shadow</u></a></p>
+<li><p><a href="./src/css_mouse_boxshadow.html">css 鼠标改变box-shadow</a></p>
+</li>
+<li><p><a href="./src/css_side_menu.html">css 侧边菜单</a></p>
 </li>
 </ul>
 
+    </div>
+    <style>
+      .works-list a {
+        transition: .2s;
+        text-decoration: none !important;
+        font-size: large;
+      }
+      .works-list li {
+        height: 50px;
+      }
+      .works-list a:hover {
+        /* font-size: xx-large; */
+        text-decoration: underline !important;
+        font-size:x-large;
+      }
+    </style>
   </div>
 </article>
     </main>
