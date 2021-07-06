@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html  lang=zh-CN>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.svg ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>cmkk的博客小站 css border画三角形 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <a class="menu__item" href="/works/">作品</a>
+    <a class="menu__item" href="/about/">关于</a>
+    <a class="menu__item" href="/resume/">简历</a>
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">css border画三角形</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2021-07-06T15:00:00.000Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2021-07-06 23:00:00
+</time>
+
+    
+
+    
+<div class="post__tag">
+  <i class="blogfont">&#xe7ec;</i>
+  <a class="tag-link-link" href="/tags/css/" rel="tag">css</a>
+</div>
+
+
+    <div id="/2021/07/06/2021-07-06-css-border%E7%94%BB%E4%B8%89%E8%A7%92%E5%BD%A2/" class="leancloud_visitors post__stat" data-flag-title="css border画三角形">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- 回到顶部 -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  <ol class="post__toc"><li class="post__toc-item post__toc-level-1"><a class="post__toc-link" href="#css-border%E7%94%BB%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="post__toc-text">css border画三角形</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#%E5%9F%BA%E7%A1%80%E6%96%B9%E6%B3%95"><span class="post__toc-text">基础方法</span></a></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#%E8%BF%9B%E9%98%B6%E7%9A%84%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E8%BD%AC%E5%8F%98"><span class="post__toc-text">进阶的方法——一个小小的转变</span></a></li></ol></li></ol>
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <h1 id="css-border画三角形"><a href="#css-border画三角形" class="headerlink" title="css border画三角形"></a>css border画三角形</h1><p>昨天在coding时遇到一个问题——怎么用在HTML中画三角形呢？</p>
+<h2 id="基础方法"><a href="#基础方法" class="headerlink" title="基础方法"></a>基础方法</h2><p>我很自然地想到了一个方法，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;triangle1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">	<span class="hljs-selector-class">.triangle1</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">200px</span> <span class="hljs-number">100px</span> <span class="hljs-number">200px</span> <span class="hljs-number">100px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-color</span>: yellow blue orange red;</span><br><span class="css">      <span class="hljs-attribute">border-style</span>: solid;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<div class="triangle"></div>
+<br>
+<style>
+    .triangle {
+      width: 0;
+      height: 0;
+      border-width: 200px 100px 200px 100px;
+      border-color: yellow blue orange red;
+      border-style: solid;
+    }
+</style>
+
+<p>可以看出，这个div被四个三角形填满，因为内容为空，边框占据了整个div空间。需要哪个三角形时，只需要将其他部分的边框颜色设置为<code>透明 transparent</code>即可。</p>
+<p>比如现在我想要一个三角形，可有：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;triangle2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">	<span class="hljs-selector-class">.triangle2</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">200px</span> <span class="hljs-number">100px</span> <span class="hljs-number">200px</span> <span class="hljs-number">100px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-color</span>: transparent transparent orange transparent;</span><br><span class="css">      <span class="hljs-attribute">border-style</span>: solid;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>有<code>triangle2</code>效果如下：</p>
+<div class="triangle2"></div>
+<br>
+<style>
+    .triangle2 {
+      width:0;
+      height:0;
+      border-width: 200px 100px 200px 100px;
+      border-color: transparent transparent orange transparent;
+      border-style: solid;
+    }
+</style>
+
+<p>如果我想要一个直角三角形怎么办呢？很简单，两个三角形拼接即可，可用如下代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;triangle3&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">	<span class="hljs-selector-class">.triangle3</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="css">      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">200px</span> <span class="hljs-number">100px</span> <span class="hljs-number">200px</span> <span class="hljs-number">100px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-color</span>: transparent transparent orange orange;</span><br><span class="css">      <span class="hljs-attribute">border-style</span>: solid;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>有<code>triangle3</code>果如下：</p>
+<div class="triangle3"></div>
+<br>
+<style>
+    .triangle3 {
+      width: 0;
+      height: 0;
+      border-width: 200px 100px 200px 100px;
+      border-color: transparent transparent orange orange;
+      border-style: solid;
+    }
+</style>
+
+<hr>
+<h2 id="进阶的方法——一个小小的转变"><a href="#进阶的方法——一个小小的转变" class="headerlink" title="进阶的方法——一个小小的转变"></a>进阶的方法——一个小小的转变</h2><p>但是这样画有一个问题——即使我们画的三角形只有200px高，但是整个图形还是占据了400px的高度（在开发者工具可以看见，元素占据的高度还是400px），那么这个问题怎么解决呢？答案是将上边框宽度设置为0。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;triangle4&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css"><span class="hljs-selector-class">.triangle4</span> &#123;</span><br><span class="css">  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="css">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="css">  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">100px</span> <span class="hljs-number">200px</span> <span class="hljs-number">100px</span>;</span><br><span class="css">  <span class="hljs-attribute">border-color</span>: transparent transparent orange transparent;</span><br><span class="css">  <span class="hljs-attribute">border-style</span>: solid;</span><br><span class="css">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>高度只有200px的<code>triangle4</code>如下：</p>
+<div class="triangle4"></div>
+<style>
+.triangle4 {
+  width: 0;
+  height: 0;
+  border-width: 0 100px 200px 100px;
+  border-color: transparent transparent orange transparent;
+  border-style: solid;
+}
+</style>
+
+
+
+
+
+<p>这是什么原理呢？其实拿出纸笔，一画便知。</p>
+<div class="triangle1"></div>
+
+<p>拿<code>triangle1</code>来说，四个三角形的顶点即div块的中心，该点距四边界的距离就是border的宽度，现在我们将border-top设置为0，就意味着上边界距离中心点的距离为0，最后也就得到如上所示效果。（拿出纸笔画画效果更佳哦）</p>
+<p>相应的，由此可以得出另一种画直角三角形的方法，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;triangle5&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">	<span class="hljs-selector-class">.triangle2</span> &#123;</span><br><span class="css">      <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;</span><br><span class="css">      <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">400px</span> <span class="hljs-number">200px</span>;</span><br><span class="css">      <span class="hljs-attribute">border-style</span>: solid;</span><br><span class="css">      <span class="hljs-attribute">border-color</span>: transparent transparent red transparent;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>得到直角三角形<code>triangle5</code>的效果如下：</p>
+<div class="triangle5"></div>
+<br>
+<style>
+    .triangle5 {
+      width: 200px;
+      height: 400px;
+      border-width: 0 0 400px 200px;
+      border-style: solid;
+      border-color: transparent transparent blue transparent;
+    }
+</style>
+
+<p>实现方式与<code>trangle4</code>类似：</p>
+<p>当我们需要一个右直角三角形（直角在右）时，依旧以div中心点为参考点，此时设置上、右边框距离为0，意味着该点距上、右边界距离为0，故而最后的效果如上。</p>
+<hr>
+<p>这确实是一种很经典、优雅的方法，就是不大好记，我会经常回来看看的😭</p>
+
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2021
+  cmKangkang
+  
+  
+    <a class="social-links" target="_blank" rel="noopener" href="https://github.com/cmkangkang"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:cmkangkang@foxmail.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
