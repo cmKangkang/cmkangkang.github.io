@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html  lang=zh-CN>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+    
+    <link rel="shortcut icon" href="/images/favicon.svg ">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon-android.png " sizes="192x192">
+    
+    
+    <link rel="apple-touch-icon" href="/images/favicon-apple.png " sizes="180x180">
+    
+  
+  <!-- title -->
+  <title>cmkk的博客小站 css布局与定位 </title>
+  <!-- styles -->
+  <!-- styles -->
+
+<link rel="stylesheet" href="/styles/global.css">
+
+  <!-- rss -->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header id="header">
+  
+  <nav class="menu menu--right">
+  
+    <a class="menu__item" href="/">主页</a>
+    <a class="menu__item" href="/archives/">归档</a>
+    <a class="menu__item" href="/categories/">专题</a>
+    <a class="menu__item" href="/tags/">标签</a>
+    <a class="menu__item" href="/works/">作品</a>
+    <a class="menu__item" href="/about/">关于</a>
+    <a class="menu__item" href="/resume/">简历</a>
+  </nav>
+</header>
+    <main>
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+  <h1 class="post__title">css布局与定位</h1>
+  
+  
+  <div class="post__meta">
+    
+<time class="post__date" datetime="2021-07-06T04:30:00.000Z" itemprop="datePublished">
+  
+  <i class="blogfont">&#xedff;</i>
+  
+  2021-07-06 12:30:00
+</time>
+
+    
+
+    
+<div class="post__tag">
+  <i class="blogfont">&#xe7ec;</i>
+  <a class="tag-link-link" href="/tags/css/" rel="tag">css</a>
+</div>
+
+
+    <div id="/2021/07/06/css%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" class="leancloud_visitors post__stat" data-flag-title="css布局与定位">
+  <i class="blogfont">&#xe672;</i>
+  <span class="leancloud-visitors-count">loading...</span>
+</div>
+  </div>
+</header>
+  <aside class="post__aside">
+  <div class="post__actions">
+    <a id="backTop" class="post__top" href="javascript:">
+      <i class="blogfont">&#xe6b1;</i><!-- 回到顶部 -->
+    </a>
+    <a id="share" class="post__share" href="javascript:">
+      <i class="blogfont">&#xe6c1;</i>
+    </a>
+  </div>
+  <ol class="post__toc"><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#1-%E5%AE%9A%E4%BD%8D"><span class="post__toc-text">1. 定位</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-1-%E5%81%8F%E7%A7%BB%E5%B1%9E%E6%80%A7"><span class="post__toc-text">1.1 偏移属性</span></a></li></ol></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#1-2-%E5%AE%9A%E4%BD%8D"><span class="post__toc-text">1.2 定位</span></a><ol class="post__toc-child"><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-2-1-%E9%9D%99%E6%80%81%E5%AE%9A%E4%BD%8D-static"><span class="post__toc-text">1.2.1 静态定位 static</span></a></li><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-2-2-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D-relative"><span class="post__toc-text">1.2.2 相对定位 relative</span></a></li><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-2-3-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-absolute"><span class="post__toc-text">1.2.3 绝对定位 absolute</span></a></li><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-2-4-%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D-fixed"><span class="post__toc-text">1.2.4 固定定位 fixed</span></a></li><li class="post__toc-item post__toc-level-3"><a class="post__toc-link" href="#1-2-5-%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D-sticky"><span class="post__toc-text">1.2.5 粘性定位 sticky</span></a></li></ol></li><li class="post__toc-item post__toc-level-2"><a class="post__toc-link" href="#2-%E5%B8%83%E5%B1%80%E4%B8%8E%E5%AE%9A%E4%BD%8D%E6%95%99%E7%A8%8B"><span class="post__toc-text">2. 布局与定位教程</span></a></li></ol>
+</aside>
+  <div class="post__content" itemprop="articleBody">
+    <h2 id="1-定位"><a href="#1-定位" class="headerlink" title="1. 定位"></a>1. 定位</h2><h3 id="1-1-偏移属性"><a href="#1-1-偏移属性" class="headerlink" title="1.1 偏移属性"></a>1.1 偏移属性</h3><p>偏移属性用于描述定位元素各边相对于其包含块对应边的偏移量。</p>
+<table>
+<thead>
+<tr>
+<th>偏移属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>顶部偏移量，元素上边线相对于父元素上边线的距离</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右侧，子右边线相对于父右边线的距离</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底侧，子下边线相对于父下边线的距离</td>
+</tr>
+<tr>
+<td>left</td>
+<td>左侧，子左边线相对于父左边线的距离</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-定位"><a href="#1-2-定位" class="headerlink" title="1.2 定位"></a>1.2 定位</h2><h3 id="1-2-1-静态定位-static"><a href="#1-2-1-静态定位-static" class="headerlink" title="1.2.1 静态定位 static"></a>1.2.1 静态定位 static</h3><p>静态定位是元素在HTML文档流中的默认定位，<code>无法通过偏移属性来改变元素位置</code>。</p>
+<p>元素的默认定位就是 {position: static}，故不用设置。</p>
+<h3 id="1-2-2-相对定位-relative"><a href="#1-2-2-相对定位-relative" class="headerlink" title="1.2.2 相对定位 relative"></a>1.2.2 相对定位 relative</h3><p>设置相对定位的元素是**<code>相对于元素本身在标准文档流中的位置</code>**，通过设置偏移属性来将其相对于本来位置的定位。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.positioned</span> &#123;<br>    <span class="hljs-attribute">display</span>: relative;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">50px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">50px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>以上代码将[class=”positioned”]的元素移动到其上边框距离其父元素上边框50px，左边框移动到距离其父元素左边框50px的位置。</p>
+<h3 id="1-2-3-绝对定位-absolute"><a href="#1-2-3-绝对定位-absolute" class="headerlink" title="1.2.3 绝对定位 absolute"></a>1.2.3 绝对定位 absolute</h3><p>绝对定位是相对于父级元素的定位，会**<code>脱离文档流</code><strong>且</strong><code>不占用空间</code><strong>，也成为</strong><code>脱标</code>**。</p>
+<p>设置绝对定位的元素的位置**<code>相对于最近的已定位（设置position：absolute | fixed | relative）父级元素</code>**、若其父级元素均没有定位，则相对于根元素&lt;html&gt;。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.parent</span> &#123;<br>    <span class="hljs-comment">/* 父元素设置相对定位 */</span><br>    <span class="hljs-attribute">position</span>: relative;<br>&#125;<br><br><span class="hljs-selector-class">.children</span> &#123;<br>    <span class="hljs-comment">/* 子元素设置绝对定位 */</span><br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">50%</span>);<br>    <span class="hljs-attribute">float</span>: right;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1em</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>以上代码实现子元素相对父元素的绝对定位，同时将该子元素在垂直方向上居中，水平靠右，右外边距为1em。</p>
+<h3 id="1-2-4-固定定位-fixed"><a href="#1-2-4-固定定位-fixed" class="headerlink" title="1.2.4 固定定位 fixed"></a>1.2.4 固定定位 fixed</h3><p>固定定位是**<code>相对于浏览器窗口的绝对定位</code>**，通过设置偏移属性来设置相对于浏览器的指定坐标。</p>
+<p>不管浏览器滚动条如何滚动，窗口如何变化，该元素将会始终显示在浏览器窗口的固定位置。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.header</span> &#123;<br>    <span class="hljs-attribute">position</span>: fixed;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>&#125;<br><br><span class="hljs-selector-class">.footer</span> &#123;<br>    <span class="hljs-attribute">position</span>: fixed;<br>    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>以上代码实现了一个固定在浏览器窗口顶部和底部的header和footer。</p>
+<h3 id="1-2-5-粘性定位-sticky"><a href="#1-2-5-粘性定位-sticky" class="headerlink" title="1.2.5 粘性定位 sticky"></a>1.2.5 粘性定位 sticky</h3><p>这是一种结合了相对定位和固定定位的一种特殊定位，适用于一些特殊场景。</p>
+<ul>
+<li><p>当达到<code>由偏移属性指定的条件时</code>，将表现为<code>固定定位fixed</code>；</p>
+</li>
+<li><p>当未达到条件时，将表现为<code>相对定位relative</code></p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sticker&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">  <span class="hljs-selector-tag">body</span> &#123;</span><br><span class="css">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;</span><br><span class="css">    <span class="hljs-attribute">height</span>: <span class="hljs-number">1000px</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-tag">div</span> &#123;</span><br><span class="css">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;</span><br><span class="css">    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;</span><br><span class="css">    <span class="hljs-attribute">background-color</span>: green;</span><br><span class="css">    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.sticker</span> &#123;</span><br><span class="css">    <span class="hljs-attribute">background-color</span>: black;</span><br><span class="css">    <span class="hljs-attribute">position</span>: -webkit-sticky;</span><br><span class="css">    <span class="hljs-attribute">position</span>: sticky;</span><br><span class="css">    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">100px</span>;</span><br><span class="css">  &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>以上代码实现：当div[class=”sticker”]块下边框距浏览器窗口下边框超过100px时，表现为<code>position: relative</code>；当距离==100px时，表现为<code>position: fixed</code></p>
+<p>但该属性的兼容性不是很好，使用时需要特别注意。</p>
+<p>其生效有一定限制，条件如下：</p>
+<ol>
+<li>须指定 top, right, bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。<ul>
+<li>并且 <code>top</code> 和 <code>bottom</code> 同时设置时，<code>top</code> 生效的优先级高，<code>left</code> 和 <code>right</code> 同时设置时，<code>left</code> 的优先级高。</li>
+</ul>
+</li>
+<li>设定为 <code>position:sticky</code> 元素的任意父节点的 overflow 属性必须是 visible，否则 <code>position:sticky</code> 不会生效。<ul>
+<li>如果 <code>position:sticky</code> 元素的任意父节点定位设置为 <code>overflow:hidden</code>，则父容器无法进行滚动，所以 <code>position:sticky</code> 元素也不会有滚动然后固定的情况。</li>
+<li>如果 <code>position:sticky</code> 元素的任意父节点定位设置为 <code>position:relative | absolute | fixed</code>，则元素相对父元素进行定位，而不会相对 viewprot 定位。</li>
+</ul>
+</li>
+<li>达到设定的阀值才表现为fixed。也就是设定了 <code>position:sticky</code> 的元素表现为 <code>relative</code> 还是 <code>fixed</code> 是根据元素是否达到设定了的阈值决定的。</li>
+</ol>
+<h2 id="2-布局与定位教程"><a href="#2-布局与定位教程" class="headerlink" title="2. 布局与定位教程"></a>2. 布局与定位教程</h2><ol>
+<li>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction">css布局</a></li>
+<li><a target="_blank" rel="noopener" href="http://caibaojian.com/flexbox-guide.html">flex布局</a></li>
+<li>阮一峰：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html">grid布局</a></li>
+<li><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1668477541593284433&wfr=spider&for=pc&searchword=%E5%AE%9A%E4%BD%8Dposition">四种定位(position)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/coco1s/p/6402723.html">sticky粘性定位</a></li>
+</ol>
+
+  </div>
+  
+</article>
+    </main>
+    <footer id="footer">
+  Copyright &copy;
+  2021
+  cmKangkang
+  
+  
+    <a class="social-links" target="_blank" rel="noopener" href="https://github.com/cmkangkang"><i class="blogfont">&#xe6b7; </i></a>
+  
+    <a class="social-links" href="mailto:cmkangkang@foxmail.com"><i class="blogfont">&#xe61a; </i></a>
+  
+    <a class="social-links" href="/atom.xml"><i class="blogfont">&#xe640; </i></a>
+  
+  
+</footer>
+    <!-- scripts -->
+
+<script src="/scripts/main.js"></script>
+
+  </body>
+</html>
