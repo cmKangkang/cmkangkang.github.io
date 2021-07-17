@@ -11,3 +11,10 @@
   margin: 0 space-small;
   color: font-color-normal;
 }
+#footer .icp {
+  margin-top: 12px;
+  font-size: 13px;
+}
+#footer .icp:hover {
+  text-decoration: underline;
+}

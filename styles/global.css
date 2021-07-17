@@ -197,6 +197,13 @@ main {
   margin: 0 0.5rem;
   color: #666;
 }
+#footer .icp {
+  margin-top: 12px;
+  font-size: 13px;
+}
+#footer .icp:hover {
+  text-decoration: underline;
+}
 .list {
   width: 40vw;
   margin: 0 auto;
